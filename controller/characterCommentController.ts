@@ -12,10 +12,9 @@ module.exports = {
   },
   store: async function (req: Request, res: Response) {
     try {
-      console.log(req.body.username);
-      
       await CharacterComment.create({
         characterId: req.params.id,
+        characterName: req.body.characterName,
         username: req.body.username,
         comment: req.body.comment,
       });

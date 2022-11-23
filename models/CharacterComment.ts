@@ -6,6 +6,11 @@ const commentSchema = new Schema({
     type: Number,
     required: "A character id is required",
   },
+  characterName: {
+    type: String,
+    required: "Character name is required!",
+    trim: true,
+  },
   username: {
     type: String,
     required: "Username is required!",
